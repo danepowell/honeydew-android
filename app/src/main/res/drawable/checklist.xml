@@ -1,0 +1,15 @@
+<vector android:height="24dp" android:viewportHeight="100.0"
+    android:viewportWidth="96.0" android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#33000000" android:pathData="M81.9,11.08H18.09c-3.48,0 -6.29,2.94 -6.29,6.56V93.12c0,3.63 2.81,6.56 6.29,6.56h63.81c3.48,0 6.29,-2.94 6.29,-6.56V17.65C88.19,14.02 85.38,11.08 81.9,11.08zM82.66,90.09c0,0 0.17,1.52 -0.54,2.3c-0.72,0.8 -2.06,0.69 -2.06,0.69l-60.71,0.03c0,0 -0.86,-0.01 -1.51,-0.76c-0.56,-0.65 -0.56,-2.02 -0.56,-2.02l0.02,-70.43c0,0 0,-1.04 0.61,-1.6c0.66,-0.6 1.61,-0.65 1.61,-0.65h60.72c0,0 1.15,-0.03 1.69,0.52c0.73,0.75 0.71,1.54 0.71,1.54V90.09z"/>
+    <path android:fillColor="#33000000" android:pathData="M55.72,2.3c0,1.39 -1.25,2.52 -2.8,2.52h-5.6c-1.55,0 -2.8,-1.13 -2.8,-2.52l0,0c0,-1.39 1.25,-2.52 2.8,-2.52h5.6C54.47,-0.22 55.72,0.91 55.72,2.3L55.72,2.3z"/>
+    <path android:fillColor="#33000000" android:pathData="M62.11,7.75c0,-1.46 -0.13,-3.89 -1.32,-3.89H39.24c-1.11,0 -1.38,2.44 -1.36,3.88L62.11,7.75z"/>
+    <path android:fillColor="#33000000" android:pathData="M67.31,12.8c0,-2.08 -0.19,-5.56 -1.89,-5.56h-30.78c-1.59,0 -1.97,3.49 -1.95,5.55L67.31,12.8z"/>
+    <path android:fillColor="#33000000" android:pathData="M37.19,32.05h35.44v3.15h-35.44z"/>
+    <path android:fillColor="#33000000" android:pathData="M26.04,43.29v7.87h7.88v-7.87H26.04zM27.22,49.97v-5.51h5.51v5.51H27.22z"/>
+    <path android:fillColor="#33000000" android:pathData="M37.19,47.01h35.44v3.15h-35.44z"/>
+    <path android:fillColor="#33000000" android:pathData="M37.19,61.36h35.44v3.15h-35.44z"/>
+    <path android:fillColor="#33000000" android:pathData="M37.19,75.36h35.44v3.15h-35.44z"/>
+    <path android:fillColor="#33000000" android:pathData="M26.04,28.32v7.88h7.88v-7.88H26.04zM27.22,35.01v-5.51h5.51v5.51H27.22z"/>
+    <path android:fillColor="#33000000" android:pathData="M26.04,57.64v7.87h7.88v-7.87H26.04zM27.22,64.32v-5.51h5.51v5.51H27.22z"/>
+    <path android:fillColor="#33000000" android:pathData="M26.04,71.64v7.87h7.88v-7.87H26.04zM27.22,78.32v-5.51h5.51v5.51H27.22z"/>
+</vector>

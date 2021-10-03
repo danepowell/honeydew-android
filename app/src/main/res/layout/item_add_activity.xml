@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ItemAddActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <EditText
+            android:id="@+id/add_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableEnd="@drawable/ic_search_24dp"
+            android:hint="@string/item_name"
+            android:inputType="textFilter"
+            android:textCursorDrawable="@null"
+            android:importantForAutofill="no" tools:targetApi="o"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <fragment android:name="com.danepowell.honeydew.fragment.ItemAddFragment"
+        android:id="@+id/fragment_grocery_list"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:layout="@layout/item_add_fragment" />
+
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center">
+
+    <include layout="@layout/toolbar"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sync_text"
+        android:paddingStart="@dimen/text_padding"
+        android:paddingEnd="@dimen/text_padding"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/account_info"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/account_info_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/text_padding"
+                android:paddingEnd="@dimen/text_padding"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                />
+            <TextView
+                android:id="@+id/sub_active"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/text_padding"
+                android:paddingEnd="@dimen/text_padding"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:text="@string/active_subscription"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/logout"
+                android:text="@string/logout"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textAlignment="center"
+                android:id="@+id/cancel"
+                android:text="@string/cancel_subscription"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/subscribe"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_subscription"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/subscribe_button"
+                    android:text="@string/subscribe_now"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/login_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <Button
+                android:text="@string/sign_in"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sign_in"/>
+
+            <Button
+                android:text="@string/sign_up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sign_up"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

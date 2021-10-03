@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+ext.versionMajor = 1
+ext.versionMinor = 0
+ext.versionPatch = 21
+
+ext.minimumSdkVersion = 19
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.danepowell.honeydew"
+        minSdkVersion project.ext.minimumSdkVersion
+        targetSdkVersion 28
+        versionCode generateVersionCode() // 140010203
+        versionName generateVersionName() // 1.2.3-SNAPSHOT
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "SERVER_URI", "\"https://api.danepowell.com/honeydew-production/parse/\""
+        }
+        debug {
+            buildConfigField "String", "SERVER_URI", "\"https://api.danepowell.com/honeydew-staging/parse/\""
+            //buildConfigField "String", "SERVER_URI", "\"http://10.0.2.2:5000/parse/\""
+        }
+    }
+}
+
+private Integer generateVersionCode() {
+    return 22 * 10000000 + ext.versionMajor * 10000 + ext.versionMinor * 100 + ext.versionPatch
+}
+
+private String generateVersionName() {
+    String versionName = "${ext.versionMajor}.${ext.versionMinor}.${ext.versionPatch}"
+    return versionName
+}
+
+dependencies {
+    implementation 'com.parse.bolts:bolts-android:1.4.0'
+    implementation 'com.parse:parse-android:1.15.8'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.github.amlcurran.showcaseview:library:5.4.3'
+}

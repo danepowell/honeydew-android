@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.danepowell.honeydew">
+
+    <!-- Authenticator -->
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+
+    <!-- Sync adapter -->
+    <uses-permission android:name="android.permission.READ_SYNC_STATS" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+
+    <!-- Parse push notifications -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="com.danepowell.honeydew.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.danepowell.honeydew.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <application
+        android:name=".GroceryApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/GroceryTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".activity.ItemListActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.ItemEditActivity"
+            android:label="@string/item_edit"
+            android:parentActivityName=".activity.ItemListActivity"
+            android:windowSoftInputMode="stateVisible|adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.danepowell.honeydew.activity.ItemListActivity" />
+        </activity>
+        <activity
+            android:name=".activity.ItemAddActivity"
+            android:label="@string/item_add"
+            android:parentActivityName=".activity.ItemListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.danepowell.honeydew.activity.ItemListActivity" />
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="@string/setup_sync"
+            android:parentActivityName=".activity.AuthenticationActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.danepowell.honeydew.activity.AuthenticationActivity" />
+        </activity>
+        <activity
+            android:name=".activity.SubscriptionActivity"
+            android:label="@string/subscribe"
+            android:parentActivityName=".activity.AuthenticationActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.danepowell.honeydew.activity.AuthenticationActivity" />
+        </activity>
+        <activity
+            android:name=".activity.AuthenticationActivity"
+            android:label="@string/setup_sync"
+            android:parentActivityName=".activity.ItemListActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.danepowell.honeydew.activity.ItemListActivity" />
+        </activity>
+
+        <service
+            android:name=".authentication.PhiAuthenticatorService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+        <service
+            android:name=".sync.GrocerySyncService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/sync_adapter" />
+        </service>
+        <service android:name="com.parse.PushService" />
+
+        <receiver
+            android:name=".sync.GroceryPushBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.danepowell.honeydew" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name=".database.GroceryContentProvider"
+            android:authorities="com.danepowell.honeydew.ContentProvider"
+            android:exported="false" />
+
+        <service android:name="com.parse.PushService" />
+
+        <receiver
+            android:name="com.parse.ParsePushBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.danepowell.honeydew" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.parse.push.gcm_sender_id"
+            android:value="id:848346317442" />
+    </application>
+
+</manifest>

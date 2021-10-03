@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Honeydew</string>
+    <string name="account_name" translatable="false">Phi</string>
+    <string name="list_row" translatable="false">%1$s (%2$d)</string>
+
+    <string name="subscribe">Subscribe</string>
+    <string name="setup_sync">Shop and plan together</string>
+
+    <string name="no_items">Your grocery list is empty.</string>
+    <string name="done">You survived another trip to the grocery store!</string>
+
+    <string name="item_add">Add item</string>
+    <string name="item_add_name">Add %1$s</string>
+    <string name="item_edit">Edit item</string>
+    <string name="item_delete">Delete item</string>
+
+    <string name="item_name">Item name</string>
+    <string name="item_quantity">Quantity</string>
+    <string name="item_section">Section</string>
+    <string name="quantity_plus" translatable="false">+</string>
+    <string name="quantity_minus" translatable="false">-</string>
+
+    <string name="missing_item">(item name missing)</string>
+    <string name="missing_section">(section name missing)</string>
+
+    <string name="toast_item_added">Added %1$s to list</string>
+    <string name="toast_item_deleted">Deleted %1$s</string>
+    <string name="toast_item_removed">Removed %1$s from list</string>
+    <string name="toast_item_updated">Updated %1$s</string>
+    <string name="toast_item_empty">Item name cannot be blank</string>
+
+    <string name="save">Save</string>
+    <string name="new_category">New section…</string>
+    <string name="help">Help</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="sign_in">Sign in to existing account</string>
+    <string name="sign_in_short">Sign in</string>
+    <string name="sign_up">Create new account</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="sync_text">Sign in to try these features free for a month. Cancel any time.\n\n➤ Automatically sync your grocery list with your family (unlimited devices).\n➤ Add items using Amazon Alexa.\n➤ Get dedicated support from a human being at https://honeydew.helprace.com.\n</string>
+    <string name="no_subscription">You do not have an active subscription</string>
+    <string name="subscribe_now">Subscribe now</string>
+    <string name="cancel_subscription">Cancel subscription (via Google Play)</string>
+    <string name="email_disclosure">➤ Use this email address and password to log in on all of your family\'s devices.\n➤ We won\'t use your email address for any purpose other than logging in.</string>
+    <string name="reset_password">Need to reset your password?</string>
+    <string name="password_reset_success">An email has been sent with instructions to reset your password.</string>
+    <string name="password_reset_fail">Sorry, an error occurred attempting to send password reset email.</string>
+    <string name="password_reset_working">Attempting to reset your password…</string>
+    <string name="logout">Log out</string>
+    <string name="logged_in_as">Logged in as %1$s</string>
+    <string name="active_subscription">with an active subscription.</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="rate_now">Apps only survive if you rate them. Could you spare a few seconds to rate Honeydew?</string>
+    <string name="rate">Rate</string>
+    <string name="not_now">Later</string>
+    <string name="never">No</string>
+    <string name="howdy_feedback">Are you enjoying Honeydew?</string>
+    <string name="quick">Briefly…</string>
+    <string name="go_away">Thanks for your time! We won\'t bother you again.</string>
+    <string name="fabulous">Fabulous!</string>
+    <string name="better">Is there something we can do better? Simply email honeydew@danepowell.com and we\'ll make it right!</string>
+    <string name="oh_no">Oh no!</string>
+</resources>
